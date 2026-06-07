@@ -23,8 +23,8 @@ These steps must be completed by the repository owner because they require an Ob
 ## Current release evidence
 
 - Repository: https://github.com/viggomeesters/obsidian-json-viewer
-- Release: https://github.com/viggomeesters/obsidian-json-viewer/releases/tag/0.1.0
-- Manifest version: `0.1.0`
+- Release: https://github.com/viggomeesters/obsidian-json-viewer/releases/tag/0.1.1
+- Manifest version: `0.1.1`
 - Release assets:
   - `main.js`
   - `manifest.json`

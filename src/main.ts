@@ -507,18 +507,48 @@ function highlightJsonLine(parent: HTMLElement, line: string): void {
 }
 
 function highlightJsonValue(parent: HTMLElement, value: string): void {
-  const tokenPattern = /("(?:[^"\\]|\\.)*"|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|true|false|null|[{}\[\]:,])/g;
   let cursor = 0;
-  let match: RegExpExecArray | null;
 
-  while ((match = tokenPattern.exec(value)) !== null) {
-    parent.appendText(value.slice(cursor, match.index));
-    const token = match[0];
-    parent.createSpan({ cls: tokenClass(token), text: token });
-    cursor = match.index + token.length;
+  while (cursor < value.length) {
+    const token = nextJsonToken(value, cursor);
+    if (!token) {
+      parent.appendText(value[cursor]);
+      cursor += 1;
+      continue;
+    }
+
+    if (token.start > cursor) {
+      parent.appendText(value.slice(cursor, token.start));
+    }
+    parent.createSpan({ cls: tokenClass(token.text), text: token.text });
+    cursor = token.end;
+  }
+}
+
+function nextJsonToken(value: string, start: number): { start: number; end: number; text: string } | null {
+  let index = start;
+  while (index < value.length && /\s/.test(value[index])) index += 1;
+  if (index >= value.length) return null;
+
+  const char = value[index];
+  if (char === "\"") {
+    let end = index + 1;
+    while (end < value.length) {
+      const current = value[end];
+      if (current === "\"" && value[end - 1] !== "\\") break;
+      end += 1;
+    }
+    return { start: index, end: Math.min(value.length, end + 1), text: value.slice(index, end + 1) };
   }
 
-  parent.appendText(value.slice(cursor));
+  if ("{}[]:,".includes(char)) {
+    return { start: index, end: index + 1, text: char };
+  }
+
+  const rest = value.slice(index);
+  const scalar = rest.match(/^-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|^(?:true|false|null)\b/);
+  if (!scalar) return null;
+  return { start: index, end: index + scalar[0].length, text: scalar[0] };
 }
 
 function tokenClass(token: string): string {
