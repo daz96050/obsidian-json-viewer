@@ -1,0 +1,38 @@
+# Obsidian Community Submission Checklist
+
+Current release target: `0.1.0`
+
+## Repository
+
+- [x] Public GitHub repository exists.
+- [x] `README.md` describes what the plugin does and how to use it.
+- [x] `LICENSE` exists.
+- [x] `manifest.json` exists at repository root.
+- [x] `manifest.json.id` is unique and does not contain `obsidian`.
+- [x] `manifest.json.version` uses `x.y.z`.
+- [x] `versions.json` maps plugin version to minimum Obsidian version.
+
+## Release
+
+- [x] `npm run build` passes.
+- [x] `npx tsc --noEmit` passes.
+- [x] GitHub release tag equals `manifest.json.version`.
+- [x] Release assets include `main.js`.
+- [x] Release assets include `manifest.json`.
+- [x] Release assets include `styles.css`.
+
+## Directory Submission
+
+- [ ] Sign in to https://community.obsidian.md.
+- [ ] Link the GitHub account that owns the repository.
+- [ ] Open **Plugins -> New plugin**.
+- [ ] Submit `https://github.com/viggomeesters/obsidian-json-viewer`.
+- [ ] Confirm developer policies and support commitment.
+- [ ] Address automated review feedback.
+
+These final steps require the repository owner's Obsidian account.
+
+Official references:
+
+- https://docs.obsidian.md/Plugins/Releasing/Submit%20your%20plugin
+- https://github.com/obsidianmd/obsidian-releases

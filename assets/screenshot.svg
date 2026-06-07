@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">JSON Viewer preview</title>
+  <desc id="desc">Read-only Obsidian JSON viewer showing a tree, JSONL summary, filter control, outline, and syntax-highlighted source.</desc>
+  <rect width="1280" height="760" fill="#1e1f1c"/>
+  <rect x="24" y="24" width="1232" height="712" rx="14" fill="#242620" stroke="#3d4038"/>
+  <text x="56" y="68" fill="#e6e1c8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">events.jsonl</text>
+  <text x="56" y="96" fill="#8f8b76" font-family="Menlo, Consolas, monospace" font-size="14">20_files/2026-06/events.jsonl</text>
+  <rect x="836" y="48" width="156" height="34" rx="7" fill="#1b1d18" stroke="#44483d"/>
+  <text x="872" y="70" fill="#8f8b76" font-family="Inter, Arial, sans-serif" font-size="15">Filter</text>
+  <rect x="1010" y="48" width="34" height="34" rx="7" fill="#1b1d18" stroke="#44483d"/>
+  <text x="1019" y="72" fill="#e6e1c8" font-family="Arial, sans-serif" font-size="19">↧</text>
+  <rect x="1052" y="48" width="34" height="34" rx="7" fill="#1b1d18" stroke="#44483d"/>
+  <text x="1061" y="72" fill="#e6e1c8" font-family="Arial, sans-serif" font-size="19">↥</text>
+  <rect x="1094" y="48" width="34" height="34" rx="7" fill="#1b1d18" stroke="#44483d"/>
+  <text x="1102" y="72" fill="#e6e1c8" font-family="Arial, sans-serif" font-size="18">⧉</text>
+  <line x1="48" y1="120" x2="1232" y2="120" stroke="#3d4038"/>
+
+  <g font-family="Menlo, Consolas, monospace" font-size="17">
+    <rect x="58" y="144" width="184" height="28" rx="14" fill="#1b1d18" stroke="#3d4038"/>
+    <text x="76" y="164" fill="#e6e1c8" font-size="14">3 rendered records</text>
+    <line x1="74" y1="208" x2="74" y2="612" stroke="#3d4038"/>
+    <line x1="106" y1="300" x2="106" y2="566" stroke="#3d4038"/>
+
+    <text x="58" y="200" fill="#ff4f9a">line 1</text>
+    <rect x="136" y="182" width="60" height="22" rx="4" fill="#363932"/>
+    <text x="146" y="199" fill="#39d98a" font-size="13">object</text>
+    <text x="210" y="199" fill="#8f8b76" font-size="14">4 keys</text>
+
+    <text x="90" y="244" fill="#ff4f9a">id</text>
+    <rect x="126" y="226" width="56" height="22" rx="4" fill="#363932"/>
+    <text x="137" y="243" fill="#8f8b76" font-size="13">string</text>
+    <text x="196" y="244" fill="#e6d85c">evt_001</text>
+
+    <text x="90" y="288" fill="#ff4f9a">duration</text>
+    <rect x="188" y="270" width="58" height="22" rx="4" fill="#363932"/>
+    <text x="199" y="287" fill="#8f8b76" font-size="13">number</text>
+    <text x="260" y="288" fill="#59c8ff">142</text>
+
+    <text x="90" y="332" fill="#ff4f9a">payload</text>
+    <rect x="176" y="314" width="60" height="22" rx="4" fill="#363932"/>
+    <text x="186" y="331" fill="#39d98a" font-size="13">object</text>
+    <text x="250" y="331" fill="#8f8b76" font-size="14">3 keys</text>
+
+    <text x="122" y="376" fill="#ff4f9a">tags</text>
+    <rect x="176" y="358" width="48" height="22" rx="4" fill="#363932"/>
+    <text x="186" y="375" fill="#64b5f6" font-size="13">array</text>
+    <text x="238" y="375" fill="#8f8b76" font-size="14">2 items</text>
+
+    <text x="154" y="420" fill="#ff4f9a">[0]</text>
+    <rect x="196" y="402" width="56" height="22" rx="4" fill="#363932"/>
+    <text x="207" y="419" fill="#8f8b76" font-size="13">string</text>
+    <text x="266" y="420" fill="#e6d85c">agent</text>
+
+    <text x="58" y="486" fill="#ff4f9a">line 2</text>
+    <rect x="136" y="468" width="60" height="22" rx="4" fill="#363932"/>
+    <text x="146" y="485" fill="#39d98a" font-size="13">object</text>
+    <text x="210" y="485" fill="#8f8b76" font-size="14">4 keys</text>
+  </g>
+
+  <line x1="950" y1="144" x2="950" y2="690" stroke="#3d4038"/>
+  <text x="974" y="158" fill="#8f8b76" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">OUTLINE</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="15">
+    <text x="974" y="202" fill="#e6e1c8">line 1</text>
+    <text x="1204" y="202" fill="#8f8b76">4</text>
+    <text x="996" y="238" fill="#e6e1c8">payload</text>
+    <text x="1204" y="238" fill="#8f8b76">3</text>
+    <text x="1018" y="274" fill="#8f8b76">tags</text>
+    <text x="1204" y="274" fill="#8f8b76">2</text>
+    <text x="974" y="310" fill="#e6e1c8">line 2</text>
+    <text x="1204" y="310" fill="#8f8b76">4</text>
+  </g>
+
+  <rect x="58" y="632" width="840" height="42" rx="7" fill="#1b1d18" stroke="#3d4038"/>
+  <text x="78" y="658" fill="#8f8b76" font-family="Inter, Arial, sans-serif" font-size="15">Raw JSON/JSONL with line numbers and syntax highlighting</text>
+</svg>
